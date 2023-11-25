@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+<persistence-unit name = "JPA_PU transaction-type = "RESOURCE-LOCAL">
+            <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+            <class>Persistence.Cliente</class>
+            <class>Persistence.Tecnico</class>
+            <class>Persistence.Incidente</class>
+            <class>Persistence.Especialidad</class>
+            <class>Persistence.Persona</class>
+            <class>Persistence.Usuario</class>
+            <class>Persistence.Problema</class>
+            
+            <properties>
+            <property name="javax.persistence.jdbc.url"  value="jdbc:mysql:integrador base//localhost:3306/db_?zeroDateTimeBehavior=convertToNull&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="admin"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.password" value="admin"/>
+            <property name = "java.persistence.schema-generation.database.action" value="create"/>
+            <property name="eclipselink.ddl-generation"
+                      value="create-or-extend-tables"/>
+        </properties>
+            
+
+</persistence-unit>
+
+
+
